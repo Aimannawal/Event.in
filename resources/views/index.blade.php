@@ -157,22 +157,6 @@
                 <button
                     class="flex items-center justify-between w-full py-4 text-left transition-colors duration-200 hover:bg-gray-50"
                     onclick="toggleFAQ(this)">
-                    <span class="text-lg font-medium">Bagaimana cara membuat event?</span>
-                    <svg class="w-6 h-6 text-gray-500 transition-transform duration-200 ease-in-out" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="overflow-hidden transition-all duration-200 max-h-0 opacity-0">
-                    <p class="text-gray-600 p-4">Untuk membuat event, Anda cukup masuk ke akun Anda, klik tombol "Buat
-                        Event", dan ikuti panduan langkah demi langkah yang telah kami sediakan.</p>
-                </div>
-            </div>
-
-            <div class="mb-4 border-b border-gray-200">
-                <button
-                    class="flex items-center justify-between w-full py-4 text-left transition-colors duration-200 hover:bg-gray-50"
-                    onclick="toggleFAQ(this)">
                     <span class="text-lg font-medium">Bagaimana cara menemukan event di sekitar saya?</span>
                     <svg class="w-6 h-6 text-gray-500 transition-transform duration-200 ease-in-out" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

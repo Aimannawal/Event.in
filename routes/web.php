@@ -12,6 +12,10 @@ Route::get('/event', function () {
     return view('events');
 });
 
+Route::get('/category', function () {
+    return view('category-events');
+});
+
 Route::get('/search', function () {
     $searchQuery = request('q', 'chiquitita');
     return view('search-results', ['searchQuery' => $searchQuery]);
