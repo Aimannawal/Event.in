@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
+use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -66,11 +68,39 @@ class AuthController extends Controller
     }
 
     public function userDashboard()
-    {
-        if (Auth::user()->role !== 'user') {
-            return redirect('/')->with('error', 'Access denied. Users only.');
-        }
-
-        return view('user.dashboard');
+{
+    if (Auth::user()->role !== 'user') {
+        return redirect('/')->with('error', 'Access denied. Users only.');
     }
+
+    $userId = Auth::id();
+
+    $totalBookings = Booking::where('user_id', $userId)->count();
+
+    $favoriteCategory = Event::join('bookings', 'events.id', '=', 'bookings.event_id')
+        ->where('bookings.user_id', $userId)
+        ->select('events.category_id', \DB::raw('COUNT(events.category_id) as count'))
+        ->groupBy('events.category_id')
+        ->orderBy('count', 'desc')
+        ->first();
+
+    $favoriteCategoryName = $favoriteCategory ? $favoriteCategory->category->name : 'No bookings yet';
+
+    $eventRecommendations = Event::where('date', '>=', now())
+        ->orderBy('date', 'asc')
+        ->take(5)
+        ->get();
+
+    $activityHistory = Booking::where('user_id', $userId)
+        ->latest()
+        ->take(5)
+        ->get();
+
+    return view('user.dashboard', [
+        'totalBookings' => $totalBookings,
+        'favoriteCategory' => $favoriteCategoryName,
+        'eventRecommendations' => $eventRecommendations,
+        'activityHistory' => $activityHistory,
+    ]);
+}
 }

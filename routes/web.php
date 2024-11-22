@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewController;
 
 // route before using auth
@@ -44,8 +45,6 @@ Route::get('/admin_booking', function () {
 // route user
 Route::get('/user', [AuthController::class, 'userDashboard'])->name('user.dashboard');
 
-Route::get('/user_booking', function () {
-    return view('user.bookings');
-})->name('user.bookings');
+Route::get('/my-bookings', [UserController::class, 'myBookings'])->name('user.bookings');
 
 Route::post('/booking', [ViewController::class, 'storeBooking'])->name('booking.store');
