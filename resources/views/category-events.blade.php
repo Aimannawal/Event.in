@@ -19,7 +19,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         @forelse ($events as $event)
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="{{ $event->image ?? 'https://source.unsplash.com/random/800x600?' . $category->name }}" 
+                <img src="{{ Storage::url($event->image_url) }}" 
                      alt="Event Image" 
                      class="w-full h-48 object-cover">
                 <div class="p-6">

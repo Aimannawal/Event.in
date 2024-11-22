@@ -28,7 +28,7 @@
             @foreach ($events as $event)
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <img 
-                        src="{{ $event->image ?? 'https://source.unsplash.com/random/800x400?event&sig=' . $loop->index }}" 
+                        src="{{ Storage::url($event->image_url) }}" 
                         alt="Event Image" 
                         class="w-full h-48 object-cover">
                     <div class="p-6">

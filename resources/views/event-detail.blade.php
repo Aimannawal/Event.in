@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mx-auto px-4 py-12">
         <div class="max-w-4xl mx-auto">
-            <img src="{{ asset('assets/example.jpg') }}" alt="Event Image"
+            <img src="{{ Storage::url($event->image_url) }}" alt="Event Image"
                 class="w-full h-96 object-cover rounded-lg shadow-lg mb-8">
 
             <h1 class="text-4xl font-bold mb-4">{{ $event->title }}</h1>
