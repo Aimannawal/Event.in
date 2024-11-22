@@ -8,6 +8,19 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/event', function () {
+    return view('events');
+});
+
+Route::get('/search', function () {
+    $searchQuery = request('q', 'chiquitita');
+    return view('search-results', ['searchQuery' => $searchQuery]);
+})->name('search');
+
+Route::get('/event/{id}', function ($id) {
+    return view('event-detail', ['id' => $id]);
+})->name('event.detail');
+
 // route auth
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);

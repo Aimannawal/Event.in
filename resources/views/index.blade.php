@@ -23,7 +23,7 @@
                         <h1 class="text-4xl md:text-6xl font-bold mb-4">Buat Acara Anda Sendiri</h1>
                         <p class="text-xl mb-8">Bagikan passionmu dengan dunia</p>
                         <a href="#"
-                            class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">mulai merencanakan</a>
+                            class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">Mulai Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                         <h1 class="text-4xl md:text-6xl font-bold mb-4">Terhubung dengan orang-orang sejalan</h1>
                         <p class="text-xl mb-8">Bangun jaringan Anda di acara-acara menarik</p>
                         <a href="#"
-                            class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">bergabung sekarang</a>
+                            class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">Ayo Bergabung</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,6 @@
         <div class="swiper-pagination !bottom-6"></div>
     </div>
 </div>
-
     <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-semibold mb-8 text-center">kategori Terpopuler</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -145,7 +144,7 @@
                 @endfor
             </div>
             <div class="text-center mt-8">
-                <a href="#" class="text-[#EB8317] font-medium hover:underline">Lihat Semua Acara</a>
+                <a href="/event" class="text-[#EB8317] font-medium hover:underline">Lihat Semua Acara</a>
             </div>
         </div>
     </div>
