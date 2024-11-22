@@ -15,7 +15,7 @@
                 <div class="mb-8">
                     <a href="/" class="flex items-center gap-2 text-2xl font-bold text-[#EB8317]">
                         Event.in
-                        <span class="rounded-md bg-[#EB8317]/10 px-2 py-1 text-xs font-medium">Admin</span>
+                        <span class="rounded-md bg-[#EB8317]/10 px-2 py-1 text-xs font-medium">{{ Auth::user()->name }}</span>
                     </a>
                 </div>
                 
@@ -24,20 +24,14 @@
                         <p class="px-2 text-xs font-semibold uppercase tracking-wider text-gray-400">Menu</p>
                     </div>
                     
-                    <a href="{{ route('admin.dashboard') }}" 
-                       class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 transition-all hover:bg-[#EB8317]/10 hover:text-[#EB8317] {{ request()->routeIs('admin.dashboard') ? 'bg-[#EB8317]/10 text-[#EB8317]' : '' }}">
+                    <a href="{{ route('user.dashboard') }}" 
+                       class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 transition-all hover:bg-[#EB8317]/10 hover:text-[#EB8317] {{ request()->routeIs('user.dashboard') ? 'bg-[#EB8317]/10 text-[#EB8317]' : '' }}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
                         <span class="font-medium">Overview</span>
                     </a>
 
-                    <a href="{{ route('admin.events') }}" 
-                       class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 transition-all hover:bg-[#EB8317]/10 hover:text-[#EB8317] {{ request()->routeIs('admin.events') ? 'bg-[#EB8317]/10 text-[#EB8317]' : '' }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-                        <span class="font-medium">Events</span>
-                    </a>
-
-                    <a href="{{ route('admin.bookings') }}" 
-                       class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 transition-all hover:bg-[#EB8317]/10 hover:text-[#EB8317] {{ request()->routeIs('admin.bookings') ? 'bg-[#EB8317]/10 text-[#EB8317]' : '' }}">
+                    <a href="{{ route('user.bookings') }}" 
+                       class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 transition-all hover:bg-[#EB8317]/10 hover:text-[#EB8317] {{ request()->routeIs('user.bookings') ? 'bg-[#EB8317]/10 text-[#EB8317]' : '' }}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                         <span class="font-medium">Bookings</span>
                     </a>

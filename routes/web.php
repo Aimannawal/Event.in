@@ -38,9 +38,21 @@ Route::get('/admin_event', function () {
     return view('admin.events.index');
 })->name('admin.events');
 
+Route::get('/admin_event_edit', function () {
+    return view('admin.events.edit');
+})->name('admin.events.edit');
+
+Route::get('/admin_event_create', function () {
+    return view('admin.events.create');
+})->name('admin.events.create');
+
 Route::get('/admin_booking', function () {
     return view('admin.bookings.index');
 })->name('admin.bookings');
 
 // route user
 Route::get('/user', [AuthController::class, 'userDashboard'])->name('user.dashboard');
+
+Route::get('/user_booking', function () {
+    return view('user.bookings');
+})->name('user.bookings');
