@@ -47,3 +47,5 @@ Route::get('/user', [AuthController::class, 'userDashboard'])->name('user.dashbo
 Route::get('/user_booking', function () {
     return view('user.bookings');
 })->name('user.bookings');
+
+Route::post('/booking', [ViewController::class, 'storeBooking'])->name('booking.store');

@@ -16,8 +16,6 @@ return new class extends Migration
             $table->foreignId('event_id')->constrained('events')->onDelete('cascade');
             $table->foreignId('payment_method_id')->constrained('payment_methods')->onDelete('cascade'); 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); 
-            $table->integer('ticket_quantity');
-            $table->string('total_price');
             $table->timestamps();
         });
     }

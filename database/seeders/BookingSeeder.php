@@ -16,16 +16,12 @@ class BookingSeeder extends Seeder
             'event_id' => 1,
             'payment_method_id' => 2,
             'user_id' => 1,
-            'ticket_quantity' => 2,
-            'total_price' => 300000,
         ]);
 
         Booking::create([
             'event_id' => 1,
             'payment_method_id' => 2,
             'user_id' => 1,
-            'ticket_quantity' => 1,
-            'total_price' => 150000, 
         ]);
     }
 }
