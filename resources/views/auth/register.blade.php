@@ -44,7 +44,7 @@
                 </div>
                 <div>
                     <button type="submit" 
-                        class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-[#EB8317] to-[#d67615] hover:to-[#e56b0f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#EB8317] shadow-lg transform hover:scale-105 transition-all duration-200">
+                        class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-[#EB8317] to-[#d67615] hover:to-[#e56b0f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#EB8317] shadow-lg transform hover:scale-105 transition-all duration-200">w
                         Sign Up
                     </button>
                 </div>

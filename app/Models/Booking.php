@@ -13,8 +13,6 @@ class Booking extends Model
         'event_id',
         'payment_method_id',
         'user_id',
-        'ticket_quantity',
-        'total_price',
     ];
 
     public function event()

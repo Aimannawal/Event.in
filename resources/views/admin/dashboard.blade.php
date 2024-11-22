@@ -15,10 +15,9 @@
                 </div>
                 <div>
                     <p class="text-sm font-medium text-white/80">Total Events</p>
-                    <p class="text-3xl font-bold">25</p>
+                    <p class="text-3xl font-bold">{{ $totalEvents }}</p>
                 </div>
             </div>
-            <div class="absolute -right-4 -top-4 h-32 w-32 rounded-full bg-white/10"></div>
         </div>
 
         <div class="relative overflow-hidden rounded-xl bg-white p-6 shadow-lg">
@@ -28,7 +27,7 @@
                 </div>
                 <div>
                     <p class="text-sm font-medium text-gray-500">Total Bookings</p>
-                    <p class="text-3xl font-bold text-gray-900">150</p>
+                    <p class="text-3xl font-bold text-gray-900">{{ $totalBookings }}</p>
                 </div>
             </div>
         </div>
@@ -40,7 +39,7 @@
                 </div>
                 <div>
                     <p class="text-sm font-medium text-gray-500">Total Users</p>
-                    <p class="text-3xl font-bold text-gray-900">500</p>
+                    <p class="text-3xl font-bold text-gray-900">{{ $totalUsers }}</p>
                 </div>
             </div>
         </div>
@@ -50,16 +49,15 @@
         <div class="rounded-xl bg-white p-6 shadow-lg">
             <h2 class="mb-4 text-lg font-semibold text-gray-900">Recent Events</h2>
             <div class="space-y-4">
-                @foreach(['Summer Music Festival', 'Tech Conference 2023', 'Food & Wine Expo'] as $event)
+                @foreach($recentEvents as $event)
                     <div class="flex items-center justify-between rounded-lg border p-4">
                         <div class="flex items-center gap-4">
-                            <div class="h-10 w-10 rounded-full bg-[#EB8317]/10"></div>
                             <div>
-                                <p class="font-medium text-gray-900">{{ $event }}</p>
-                                <p class="text-sm text-gray-500">Created 2 days ago</p>
+                                <p class="font-medium text-gray-900">{{ $event->title }}</p>
+                                <p class="text-sm text-gray-500">Created {{ $event->created_at->diffForHumans() }}</p>
                             </div>
                         </div>
-                        <a href="#" class="text-sm font-medium text-[#EB8317] hover:underline">View</a>
+                        <a href="{{ route('events.detail', $event->id) }}" class="text-sm font-medium text-[#EB8317] hover:underline">View</a>
                     </div>
                 @endforeach
             </div>
@@ -68,13 +66,12 @@
         <div class="rounded-xl bg-white p-6 shadow-lg">
             <h2 class="mb-4 text-lg font-semibold text-gray-900">Recent Bookings</h2>
             <div class="space-y-4">
-                @foreach(['John Doe', 'Jane Smith', 'Mike Johnson'] as $user)
+                @foreach($recentBookings as $booking)
                     <div class="flex items-center justify-between rounded-lg border p-4">
                         <div class="flex items-center gap-4">
-                            <div class="h-10 w-10 rounded-full bg-[#EB8317]/10"></div>
                             <div>
-                                <p class="font-medium text-gray-900">{{ $user }}</p>
-                                <p class="text-sm text-gray-500">Booked Summer Music Festival</p>
+                                <p class="font-medium text-gray-900">{{ $booking->user->name }}</p>
+                                <p class="text-sm text-gray-500">Booked {{ $booking->event->name }}</p>
                             </div>
                         </div>
                         <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">Confirmed</span>

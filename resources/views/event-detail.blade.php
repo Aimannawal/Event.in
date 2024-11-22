@@ -46,42 +46,57 @@
 
             @if (Auth::check())
             <div id="paymentModal" class="modal hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-                <div class="modal-content bg-white p-6 rounded-lg w-96">
-                    <div class="modal-header flex justify-between items-center mb-4">
-                        <h5 class="modal-title text-xl font-semibold">Pilih Metode Pembayaran</h5>
-                        <button id="closeModal" class="text-gray-500 hover:text-gray-700">&times;</button>
+                <div class="modal-content bg-white rounded-lg shadow-xl w-full max-w-md mx-4">
+                    <div class="modal-header bg-gray-100 px-6 py-4 rounded-t-lg">
+                        <h5 class="modal-title text-xl font-semibold text-gray-800">Pilih Metode Pembayaran</h5>
+                        <button id="closeModal" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="modal-body">
-                        <!-- Form untuk Booking Tiket -->
+                    <div class="modal-body p-6">
                         <form action="{{ route('booking.store') }}" method="POST" id="bookingForm">
                             @csrf
                             <input type="hidden" name="event_id" value="{{ $event->id }}">
                             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
             
-                            <!-- Pilihan Metode Pembayaran -->
-                            <div class="flex items-center mb-4">
-                                <input type="radio" id="gopay" name="payment_method_id" value="1" class="mr-4" required>
-                                <img src="path-to-gopay-logo.png" alt="Gopay" class="h-8 w-8 mr-4">
-                                <label for="gopay">Gopay</label>
+                            <div class="space-y-4">
+                                <label class="block p-4 border border-gray-200 rounded-lg hover:border-orange-500 transition-colors cursor-pointer">
+                                    <div class="flex items-center">
+                                        <input type="radio" id="gopay" name="payment_method_id" value="1" class="h-5 w-5 text-orange-600" required>
+                                        <img src="/assets/gopay.png" alt="Gopay" class="h-8 w-8 mx-4 object-contain">
+                                        <span class="text-lg font-medium text-gray-700">Gopay</span>
+                                    </div>
+                                </label>
+            
+                                <label class="block p-4 border border-gray-200 rounded-lg hover:border-orange-500 transition-colors cursor-pointer">
+                                    <div class="flex items-center">
+                                        <input type="radio" id="dana" name="payment_method_id" value="2" class="h-5 w-5 text-orange-600" required>
+                                        <img src="/assets/dana.jpeg" alt="Dana" class="h-8 w-8 mx-4 object-contain">
+                                        <span class="text-lg font-medium text-gray-700">Dana</span>
+                                    </div>
+                                </label>
+            
+                                <label class="block p-4 border border-gray-200 rounded-lg hover:border-orange-500 transition-colors cursor-pointer">
+                                    <div class="flex items-center">
+                                        <input type="radio" id="ovo" name="payment_method_id" value="3" class="h-5 w-5 text-orange-600" required>
+                                        <img src="/assets/ovo.jpg" alt="OVO" class="h-8 w-8 mx-4 object-contain">
+                                        <span class="text-lg font-medium text-gray-700">OVO</span>
+                                    </div>
+                                </label>
                             </div>
             
-                            <div class="flex items-center mb-4">
-                                <input type="radio" id="dana" name="payment_method_id" value="2" class="mr-4" required>
-                                <img src="path-to-dana-logo.png" alt="Dana" class="h-8 w-8 mr-4">
-                                <label for="dana">Dana</label>
+                            <div class="mt-8 flex justify-end space-x-4">
+                                <button type="button" id="closeModalFooter" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50">
+                                    Batal
+                                </button>
+                                <button type="submit" class="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
+                                    Lanjutkan Pembayaran
+                                </button>
                             </div>
-            
-                            <div class="flex items-center mb-4">
-                                <input type="radio" id="ovo" name="payment_method_id" value="3" class="mr-4" required>
-                                <img src="path-to-ovo-logo.png" alt="OVO" class="h-8 w-8 mr-4">
-                                <label for="ovo">OVO</label>
-                            </div>
+                        </form>
                     </div>
-                    <div class="modal-footer flex justify-between items-center">
-                        <button type="button" id="closeModalFooter" class="bg-gray-500 text-white py-2 px-4 rounded">Tutup</button>
-                        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Bayar</button>
-                    </div>
-                    </form>
                 </div>
             </div>
         @else
@@ -102,36 +117,31 @@
         </div>
     </div>
     <script>
-        // Mendapatkan elemen-elemen modal
         const openModalBtn = document.getElementById('openModal');
         const modal = document.getElementById('paymentModal');
         const closeModalBtns = document.querySelectorAll('#closeModal, #closeModalFooter');
-    
-        // Menampilkan modal saat tombol "Booking Tiket" diklik
+
         openModalBtn.addEventListener('click', function (e) {
             e.preventDefault();
-            modal.style.display = 'flex'; // Menampilkan modal
+            modal.style.display = 'flex';
         });
     
-        // Menutup modal saat tombol close diklik
         closeModalBtns.forEach(function (btn) {
             btn.addEventListener('click', function () {
-                modal.style.display = 'none'; // Menyembunyikan modal
+                modal.style.display = 'none';
             });
         });
     
-        // Menutup modal jika klik di luar modal-content
         window.addEventListener('click', function (e) {
             if (e.target === modal) {
-                modal.style.display = 'none'; // Menyembunyikan modal jika klik di luar modal
+                modal.style.display = 'none';
             }
         });
     </script>
     
     <style>
-        /* Styling untuk Modal */
         .modal {
-            display: none; /* Modal disembunyikan secara default */
+            display: none; 
             position: fixed;
             top: 0;
             left: 0;
