@@ -5,7 +5,7 @@ use App\Http\Controllers\AuthController;
 
 // route before using auth
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 // route auth
