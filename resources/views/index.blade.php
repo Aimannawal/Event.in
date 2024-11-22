@@ -128,20 +128,20 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-semibold mb-8 text-center">Acara Mendatang</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                @for ($i = 1; $i <= 6; $i++)
+                @foreach ($event as $ev)
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
                         <img src="assets/example.jpg" alt="Event Image" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Event Title {{ $i }}</h3>
-                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3 class="text-xl font-semibold mb-2">{{ $ev->title }}</h3>
+                            <p class="text-gray-600 mb-4">{{ $ev->description }}</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-[#EB8317] font-medium">$49.99</span>
+                                <span class="text-[#EB8317] font-medium">{{ $ev->date }}</span>
                                 <a href="#"
                                     class="bg-[#EB8317] text-white px-4 py-2 rounded-full hover:bg-[#d67615] transition duration-300">Beli Sekarang</a>
                             </div>
                         </div>
                     </div>
-                @endfor
+                    @endforeach
             </div>
             <div class="text-center mt-8">
                 <a href="/event" class="text-[#EB8317] font-medium hover:underline">Lihat Semua Acara</a>

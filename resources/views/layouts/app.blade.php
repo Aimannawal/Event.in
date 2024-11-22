@@ -9,6 +9,7 @@
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    {{-- <link rel="icon" href="assets/logo.png"> --}}
     <style>
         .swiper-button-next,
         .swiper-button-prev {
@@ -52,13 +53,20 @@
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </div>
-                <a href="/login" class="text-[#EB8317] hover:text-[#d67615] font-medium">Login</a>
-                <a href="/register"
-                    class="bg-[#EB8317] text-white px-4 py-2 rounded-full hover:bg-[#d67615] transition duration-300">Sign
-                    Up</a>
+
+                @if(auth()->check())
+                    <a href="{{ auth()->user()->role === 'admin' ? '/admin' : '/user' }}" class="bg-[#EB8317] text-white px-4 py-2 rounded-full hover:bg-[#d67615] transition duration-300">
+                        Dashboard
+                    </a>
+                @else
+                    <a href="/login" class="text-[#EB8317] hover:text-[#d67615] font-medium">Login</a>
+                    <a href="/register" class="bg-[#EB8317] text-white px-4 py-2 rounded-full hover:bg-[#d67615] transition duration-300">Sign Up</a>
+                @endif
             </div>
         </div>
     </nav>
+</body>
+
 
     <main class="pt-16">
         @yield('content')
