@@ -11,10 +11,7 @@ Route::get('/event', [ViewController::class, 'event'])->name('event');
 
 Route::get('/category/{id}', [viewController::class, 'category'])->name('category.events');
 
-Route::get('/search', function () {
-    $searchQuery = request('q', 'chiquitita');
-    return view('search-results', ['searchQuery' => $searchQuery]);
-})->name('search');
+Route::get('/search', [ViewController::class, 'search'])->name('search');
 
 Route::get('/events/{id}', [ViewController::class, 'detail'])->name('events.detail');
 

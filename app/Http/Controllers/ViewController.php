@@ -31,12 +31,22 @@ class ViewController extends Controller
     }
 
     public function category(string $categoryId)
-{
-    $category = Category::findOrFail($categoryId);
-    $events = Event::where('category_id', $categoryId)->paginate(6); 
-    $allCategories = Category::all(); 
+    {
+        $category = Category::findOrFail($categoryId);
+        $events = Event::where('category_id', $categoryId)->paginate(6);
+        $allCategories = Category::all();
 
-    return view('category-events', compact('category', 'events', 'allCategories'));
-}
+        return view('category-events', compact('category', 'events', 'allCategories'));
+    }
 
+    public function search(Request $request)
+    {
+        $search = $request->input('q', '');
+
+        $events = Event::where('title', 'LIKE', "%$search%")
+            ->orWhere('description', 'LIKE', "%$search%")
+            ->paginate(6); 
+
+        return view('search-results', compact('events', 'search'));
+    }
 }
