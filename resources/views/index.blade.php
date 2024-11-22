@@ -10,7 +10,7 @@
                     <div class="text-center text-white px-4">
                         <h1 class="text-4xl md:text-6xl font-bold mb-4">Temukan Acara Menakjubkan</h1>
                         <p class="text-xl mb-8">Bergabunglah dengan kami untuk pengalaman yang tak terlupakan</p>
-                        <a href="#"
+                        <a href="/event"
                             class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">Telusuri Event</a>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                     <div class="text-center text-white px-4">
                         <h1 class="text-4xl md:text-6xl font-bold mb-4">Buat Acara Anda Sendiri</h1>
                         <p class="text-xl mb-8">Bagikan passionmu dengan dunia</p>
-                        <a href="#"
+                        <a href="https://wa.me/+6281907674517"
                             class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">Mulai Sekarang</a>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="text-center text-white px-4">
                         <h1 class="text-4xl md:text-6xl font-bold mb-4">Terhubung dengan orang-orang sejalan</h1>
                         <p class="text-xl mb-8">Bangun jaringan Anda di acara-acara menarik</p>
-                        <a href="#"
+                        <a href="/event"
                             class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">Ayo Bergabung</a>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
     <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-semibold mb-8 text-center">kategori Terpopuler</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <a href="#"
+            <a href="/category/1"
                 class="bg-gray-100 rounded-lg p-6 text-center hover:bg-[#EB8317] hover:text-white transition duration-300 transform hover:scale-105">
                 <svg class="w-8 h-8 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -66,7 +66,7 @@
                 </svg>
                 <h3 class="text-xl font-medium">Musik</h3>
             </a>
-            <a href="#"
+            <a href="/category/2"
                 class="bg-gray-100 rounded-lg p-6 text-center hover:bg-[#EB8317] hover:text-white transition duration-300 transform hover:scale-105">
                 <svg class="w-8 h-8 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -74,7 +74,7 @@
                 </svg>
                 <h3 class="text-xl font-medium">Olahraga</h3>
             </a>
-            <a href="#"
+            <a href="/category/3"
                 class="bg-gray-100 rounded-lg p-6 text-center hover:bg-[#EB8317] hover:text-white transition duration-300 transform hover:scale-105">
                 <svg class="w-8 h-8 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -82,7 +82,7 @@
                 </svg>
                 <h3 class="text-xl font-medium">Seni</h3>
             </a>
-            <a href="#"
+            <a href="/category/4"
                 class="bg-gray-100 rounded-lg p-6 text-center hover:bg-[#EB8317] hover:text-white transition duration-300 transform hover:scale-105">
                 <svg class="w-8 h-8 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -90,7 +90,7 @@
                 </svg>
                 <h3 class="text-xl font-medium">Makanan</h3>
             </a>
-            <a href="#"
+            <a href="/category/5"
                 class="bg-gray-100 rounded-lg p-6 text-center hover:bg-[#EB8317] hover:text-white transition duration-300 transform hover:scale-105">
                 <svg class="w-8 h-8 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -98,7 +98,7 @@
                 </svg>
                 <h3 class="text-xl font-medium">Teknologi</h3>
             </a>
-            <a href="#"
+            <a href="/category/6"
                 class="bg-gray-100 rounded-lg p-6 text-center hover:bg-[#EB8317] hover:text-white transition duration-300 transform hover:scale-105">
                 <svg class="w-8 h-8 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -106,7 +106,7 @@
                 </svg>
                 <h3 class="text-xl font-medium">Bisnis</h3>
             </a>
-            <a href="#"
+            <a href="/category/7"
                 class="bg-gray-100 rounded-lg p-6 text-center hover:bg-[#EB8317] hover:text-white transition duration-300 transform hover:scale-105">
                 <svg class="w-8 h-8 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -114,7 +114,7 @@
                 </svg>
                 <h3 class="text-xl font-medium">Kesehatan</h3>
             </a>
-            <a href="#"
+            <a href="/category/8"
                 class="bg-gray-100 rounded-lg p-6 text-center hover:bg-[#EB8317] hover:text-white transition duration-300 transform hover:scale-105">
                 <svg class="w-8 h-8 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -136,8 +136,8 @@
                             <p class="text-gray-600 mb-4">{{ $ev->description }}</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-[#EB8317] font-medium">{{ $ev->date }}</span>
-                                <a href="#"
-                                    class="bg-[#EB8317] text-white px-4 py-2 rounded-full hover:bg-[#d67615] transition duration-300">Beli Sekarang</a>
+                                <a href="{{ route('events.detail', $ev->id) }}"
+                                    class="bg-[#EB8317] text-white px-4 py-2 rounded-full hover:bg-[#d67615] transition duration-300">View Details</a>
                             </div>
                         </div>
                     </div>

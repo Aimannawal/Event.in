@@ -7,22 +7,16 @@ use App\Http\Controllers\ViewController;
 // route before using auth
 Route::get('/', [ViewController::class, 'index'])->name('index');
 
-Route::get('/event', function () {
-    return view('events');
-});
+Route::get('/event', [ViewController::class, 'event'])->name('event');
 
-Route::get('/category', function () {
-    return view('category-events');
-});
+Route::get('/category/{id}', [viewController::class, 'category'])->name('category.events');
 
 Route::get('/search', function () {
     $searchQuery = request('q', 'chiquitita');
     return view('search-results', ['searchQuery' => $searchQuery]);
 })->name('search');
 
-Route::get('/event/{id}', function ($id) {
-    return view('event-detail', ['id' => $id]);
-})->name('event.detail');
+Route::get('/events/{id}', [ViewController::class, 'detail'])->name('events.detail');
 
 // route auth
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');

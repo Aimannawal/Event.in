@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image_url');
-            $table->decimal('price');
+            $table->string('price');
             $table->string('date');
             $table->string('location');
             $table->string('organizer');
