@@ -1,60 +1,61 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="relative w-full h-screen max-h-[70vh]">
-        <div class="swiper-container w-full h-full">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide relative w-full h-full">
-                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/event.jpg');"></div>
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="text-center text-white px-4">
-                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Temukan Acara Menakjubkan</h1>
-                            <p class="text-xl mb-8">Bergabunglah dengan kami untuk pengalaman yang tak terlupakan</p>
-                            <a href="#"
-                                class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">Telusuri Event</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide relative w-full h-full">
-                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/create.jpg');">
-                    </div>
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="text-center text-white px-4">
-                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Buat Acara Anda Sendiri</h1>
-                            <p class="text-xl mb-8">Bagikan passionmu dengan dunia</p>
-                            <a href="#"
-                                class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">mulai merencanakan</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide relative w-full h-full">
-                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/mutual.jpg');">
-                    </div>
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="text-center text-white px-4">
-                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Terhubung dengan orang-orang sejalan</h1>
-                            <p class="text-xl mb-8">Bangun jaringan Anda di acara-acara menarik</p>
-                            <a href="#"
-                                class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">bergabung sekarang</a>
-                        </div>
+<div class="relative w-full h-[80vh] max-h-[80vh]">
+    <div class="swiper-container w-full h-full">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide relative w-full h-full">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/event.jpg');"></div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center text-white px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Temukan Acara Menakjubkan</h1>
+                        <p class="text-xl mb-8">Bergabunglah dengan kami untuk pengalaman yang tak terlupakan</p>
+                        <a href="#"
+                            class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">Telusuri Event</a>
                     </div>
                 </div>
             </div>
-            <div
-                class="swiper-button-prev !hidden md:!flex !aspect-square !w-12 !h-12 !bg-white/80 !rounded-full !text-[#EB8317] hover:!bg-[#EB8317] hover:!text-white transition-all duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
+            <div class="swiper-slide relative w-full h-full">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/create.jpg');">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center text-white px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Buat Acara Anda Sendiri</h1>
+                        <p class="text-xl mb-8">Bagikan passionmu dengan dunia</p>
+                        <a href="#"
+                            class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">mulai merencanakan</a>
+                    </div>
+                </div>
             </div>
-            <div
-                class="swiper-button-next !hidden md:!flex !aspect-square !w-12 !h-12 !bg-white/80 !rounded-full !text-[#EB8317] hover:!bg-[#EB8317] hover:!text-white transition-all duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+            <div class="swiper-slide relative w-full h-full">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/mutual.jpg');">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center text-white px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Terhubung dengan orang-orang sejalan</h1>
+                        <p class="text-xl mb-8">Bangun jaringan Anda di acara-acara menarik</p>
+                        <a href="#"
+                            class="bg-[#EB8317] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#d67615] transition duration-300">bergabung sekarang</a>
+                    </div>
+                </div>
             </div>
-            <div class="swiper-pagination !bottom-6"></div>
         </div>
+        <div
+            class="swiper-button-prev !hidden md:!flex !aspect-square !w-12 !h-12 !bg-white/80 !rounded-full !text-[#EB8317] hover:!bg-[#EB8317] hover:!text-white transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </div>
+        <div
+            class="swiper-button-next !hidden md:!flex !aspect-square !w-12 !h-12 !bg-white/80 !rounded-full !text-[#EB8317] hover:!bg-[#EB8317] hover:!text-white transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </div>
+        <div class="swiper-pagination !bottom-6"></div>
     </div>
+</div>
+
     <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-semibold mb-8 text-center">kategori Terpopuler</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
