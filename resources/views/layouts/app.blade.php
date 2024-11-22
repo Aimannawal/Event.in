@@ -69,7 +69,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Event.in</h3>
-                    <p class="text-gray-400">DTemukan dan ciptakan acara yang tak terlupakan dengan Event.in</p>
+                    <p class="text-gray-400">Temukan dan ciptakan acara yang tak terlupakan dengan Event.in</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
@@ -122,7 +122,7 @@
         function toggleFAQ(button) {
             const content = button.nextElementSibling;
             const svg = button.querySelector('svg');
-            const allContents = document.querySelectorAll('.overflow-hidden');
+            const allContents = document.querySelectorAll('.faq-content');
             const allSvgs = document.querySelectorAll('svg');
 
             allContents.forEach(item => {
@@ -150,10 +150,40 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const contents = document.querySelectorAll('.overflow-hidden');
+            const contents = document.querySelectorAll('.faq-content');
             contents.forEach(content => {
                 content.style.maxHeight = '0px';
                 content.style.opacity = '0';
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 1,
+                spaceBetween: 10,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
             });
         });
 
